@@ -10,3 +10,10 @@
   max-width: 1024px;
   margin: 1.35rem auto 0;
 }
+
+
+.atxt {
+  &, & > *, & > * * {
+    user-select: text !important;
+  }
+}

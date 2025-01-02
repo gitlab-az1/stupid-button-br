@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ToastContainer
         toastStyle={{ color: 'var(--text-color)' }}
         position="bottom-right"
+        theme="dark"
         newestOnTop={false}
         autoClose={5000}
         draggable

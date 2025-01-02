@@ -16,7 +16,11 @@ export type Writable<T> = {
 }
 
 export type DeepWritable<T> = {
-  -readonly [P in keyof T]: DeepWritable<T[P]>;
+  -readonly [P in keyof T]: T[P] extends object ? DeepWritable<T[P]> : T[P];
+}
+
+export type DeepReadonly<T> = {
+  readonly [P in keyof T]: T[P] extends object ? DeepReadonly<T[P]> : T[P];
 }
 
 export type PrimitiveDictionary = {

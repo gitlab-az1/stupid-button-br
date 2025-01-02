@@ -12,13 +12,13 @@ export default function Document() {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link
           rel="apple-touch-icon"
-          href="/images/logo-icon.svg"
-          type="image/svg"
+          href="/images/logo.png"
+          type="image/png"
         />
         <link
           rel="shortcut icon"
-          href="/images/logo-icon.svg"
-          type="image/svg"
+          href="/images/logo.png"
+          type="image/png"
         />
       </Head>
       <body className="theme-dark">
