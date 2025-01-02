@@ -28,18 +28,18 @@ const App = () => {
           sx={{
             borderRadius: '9px',
             color: '#fefeff',
-            backgroundColor: palette.theme.default,
+            backgroundColor: palette.theme.blue,
             transition: 'background-color .18s ease-in-out, color .13s ease-in-out',
 
             '&:hover': {
-              backgroundColor: addOpacityToHexColorAsRGBA(palette.theme.default, 0.2),
-              color: palette.theme.default,
+              backgroundColor: addOpacityToHexColorAsRGBA(palette.theme.blue, 0.2),
+              color: palette.theme.blue,
             },
 
             '& > span': {
-              fontSize: '1.4rem',
+              fontSize: '1.3rem',
               fontWeight: 500,
-              letterSpacing: 'calc(var(--default-letter-spacing) / 2)',
+              letterSpacing: 'calc(var(--default-letter-spacing) / 3)',
 
               '& > span': {
                 textDecoration: 'underline',
@@ -47,7 +47,7 @@ const App = () => {
             },
           }}
         >
-          <Typography.Text>Clique por <span>R$4,00</span></Typography.Text>
+          <Typography.Text>Clique por <span>R$ 4,00</span></Typography.Text>
         </Button>
       </Box>
       <Box
