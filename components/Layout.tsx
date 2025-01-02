@@ -1,7 +1,8 @@
-import React, { HTMLAttributes, memo } from 'react';
 import { Box, type SxProps } from '@mui/material';
+import { Analytics } from '@vercel/analytics/react';
+import React, { HTMLAttributes, memo } from 'react';
 
-import { cn } from '@/utils';
+import { cn, isProduction } from '@/utils';
 import OfflineWarning from './OfflineWarning';
 
 
@@ -18,18 +19,25 @@ const Layout = ({
   ...props
 }: LayoutProps) => {
   return (
-    <Box
-      {...props}
-      sx={sx}
-      className={cn('wrapper', props.className)}
-    >
+    <>
       {
-        disableOfflineWarning ? null : (
-          <OfflineWarning />
-        )
+        isProduction() ? (
+          <Analytics />
+        ) : null
       }
-      {children}
-    </Box>
+      <Box
+        {...props}
+        sx={sx}
+        className={cn('wrapper', props.className)}
+      >
+        {
+          disableOfflineWarning ? null : (
+            <OfflineWarning />
+          )
+        }
+        {children}
+      </Box>
+    </>
   );
 };
 
