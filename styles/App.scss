@@ -1,0 +1,12 @@
+@use './sass/' as *;
+
+
+.wrapper {
+  width: 100%;
+  height: calc(100svh - 1.35rem);
+  overflow: auto;
+  position: relative;
+  padding: 1rem 1.1rem;
+  max-width: 1024px;
+  margin: 1.35rem auto 0;
+}
